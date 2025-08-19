@@ -111,7 +111,7 @@
               >
             </li>
             <li>
-              <a
+              <a href="TraitementReleves.html"
                 ><i class="fa fa-light fa-calculator"></i>
                 <span class="nav-label">Traitement relevés </span></a
               >
@@ -311,20 +311,7 @@
             <div class="row">
               <div class="row mb-3"></div>
 
-              <div class="col-sm-3 pull-right">
-                <div class="input-group">
-                  <input
-                    type="text"
-                    placeholder="Rechercher"
-                    class="input-sm form-control"
-                  />
-                  <span class="input-group-btn">
-                    <button type="button" class="btn btn-sm btn-primary">
-                      <i class="fa fa-search"></i>
-                    </button>
-                  </span>
-                </div>
-              </div>
+            
               <br /><br />
               <div class="row">
                 <div class="tab-pane" id="Sanctions">
@@ -347,11 +334,18 @@
                                         <div class="">
                                           <div class="col-12 col-lg-6">
                                             <h1 class="h3 mb-1">
-                                              Tableau des cours devises – Dinar
-                                              Tunisien (TND)
+                                              Tableau des cours devises 
                                             </h1>
                                             <p class="text-muted mb-0">
-                                              Cours des devises du 19/08/2025
+                                               <form>
+                              <div class="form-group row">
+                                <div class="col-sm-12">
+                                 <input type="date" id="date" class="form-control">
+                                </div>
+                             
+                               
+                              </div>
+                            </form>
                                             </p>
                                           </div>
                                           <table
@@ -372,7 +366,7 @@
                                                   aria-label="Intitulé : activer pour trier la colonne par ordre croissant"
                                                   style="width: 50px"
                                                 >
-                                                  Monniae
+                                                  Monnaie
                                                 </th>
                                                 <th
                                                   class="sorting"
@@ -712,75 +706,7 @@
                                         </div>
                                       </div>
                                     </div>
-                                    <div class="row">
-                                      <div class="col-sm-12 col-md-5">
-                                        <div
-                                          class="dataTables_info"
-                                          id="table_clients_info"
-                                          role="status"
-                                          aria-live="polite"
-                                        >
-                                          Affichage de 1 à 10 sur 18 entrées
-                                        </div>
-                                      </div>
-                                      <div class="col-sm-12 col-md-7">
-                                        <div
-                                          class="text-right"
-                                          class="dataTables_paginate paging_simple_numbers"
-                                          id="table_clients_paginate"
-                                        >
-                                          <ul class="pagination">
-                                            <li
-                                              class="paginate_button page-item previous disabled"
-                                              id="table_clients_previous"
-                                            >
-                                              <a
-                                                aria-controls="table_clients"
-                                                data-dt-idx="0"
-                                                tabindex="0"
-                                                class="page-link btn-xs btn-xs"
-                                                >Précédent</a
-                                              >
-                                            </li>
-                                            <li
-                                              class="paginate_button page-item active"
-                                            >
-                                              <a
-                                                aria-controls="table_clients"
-                                                data-dt-idx="1"
-                                                tabindex="0"
-                                                class="page-link btn-xs btn-xs"
-                                                >1</a
-                                              >
-                                            </li>
-
-                                            <li
-                                              class="paginate_button page-item"
-                                            >
-                                              <a
-                                                aria-controls="table_clients"
-                                                data-dt-idx="2"
-                                                tabindex="0"
-                                                class="page-link btn-xs btn-xs"
-                                                >2</a
-                                              >
-                                            </li>
-                                            <li
-                                              class="paginate_button page-item next"
-                                              id="table_clients_next"
-                                            >
-                                              <a
-                                                aria-controls="table_clients"
-                                                data-dt-idx="3"
-                                                tabindex="0"
-                                                class="page-link btn-xs btn-xs"
-                                                >Suivant</a
-                                              >
-                                            </li>
-                                          </ul>
-                                        </div>
-                                      </div>
-                                    </div>
+                                   
                                   </div>
                                 </div>
                               </div>
