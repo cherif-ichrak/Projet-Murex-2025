@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
     <title>Murex Erp HTML</title>
-
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="font-awesome/css/font-awesome.css" rel="stylesheet" />
 
@@ -15,9 +14,42 @@
 
     <!-- Gritter -->
     <link href="js/plugins/gritter/jquery.gritter.css" rel="stylesheet" />
-
     <link href="css/animate.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
+    <style>
+      body {
+        background: #f8fafc;
+      }
+      .table thead th {
+        white-space: nowrap;
+      }
+      .flag,
+      .bank-logo {
+        width: 28px;
+        height: 20px;
+        object-fit: cover;
+        border-radius: 4px;
+      }
+      .bank-logo {
+        width: 32px;
+        height: 32px;
+        border-radius: 6px;
+      }
+      .table td,
+      .table th {
+        vertical-align: middle;
+      }
+      .card {
+        border: 1px solid #eaeaea;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+      }
+      .rate-up {
+        font-weight: 600;
+      }
+      .badge-bank {
+        font-weight: 500;
+      }
+    </style>
   </head>
 
   <body>
@@ -66,9 +98,15 @@
                 <span class="nav-label">Clients </span></a
               >
             </li>
-           
+
             <li>
-              <a
+              <a href="ListeBanques.html"
+                ><i class="fa fa-bank"></i>
+                <span class="nav-label">Banques </span></a
+              >
+            </li>
+            <li>
+              <a href="planComptable.html"
                 ><i class="fa fa-light fa-calculator"></i>
                 <span class="nav-label">Plans Comptables </span></a
               >
@@ -88,11 +126,22 @@
 
             <li>
               <a href="biblio.html"
-                ><i class="fa fa-folder"></i>
+                ><i class="fa fa-money"></i>
                 <span class="nav-label">imputation comptable</span></a
               >
             </li>
-
+            <li>
+              <a href="packClient.html"
+                ><i class="fa fa-shopping-cart"></i>
+                <span class="nav-label">Pack Client</span></a
+              >
+            </li>
+            <li>
+              <a href="coursDevises.html"
+                ><i class="fa fa-money"></i>
+                <span class="nav-label">Cours Devises</span></a
+              >
+            </li>
             <br /><br />
             <div class="col-12 ownerCard text-center">
               Powered BY
@@ -248,535 +297,738 @@
             </ul>
           </nav>
         </div>
-        <div class="wrapper wrapper-content">
-          <div class="row">
-            <div class="col-lg-3">
-              <div class="ibox float-e-margins">
-                <div class="ibox-title">
-                  <span class="label label-info pull-right">Annual</span>
-
-                  <small
-                    ><b style="font-size: 12px">Missions Ouvertes</b></small
-                  >
-                </div>
-                <div class="ibox-content">
-                  <small class="text-left"
-                    ><b>Controle Interne &nbsp;&nbsp;&nbsp; 10</b>
-                    <b class="stat-percent font-bold text-success"
-                      >98% <i class="fa fa-bolt"> </i
-                    ></b> </small
-                  ><br />
-                  <small class="text-left"
-                    ><b>Audit Financier &nbsp;&nbsp; &nbsp;&nbsp; 30</b>
-                    <b class="stat-percent font-bold text-success"
-                      >98% <i class="fa fa-bolt"> </i
-                    ></b>
-                  </small>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-3">
-              <div class="ibox float-e-margins">
-                <div class="ibox-title">
-                  <span class="label label-success pull-right">Monthly</span>
-
-                  <small
-                    ><b style="font-size: 12px">Missions Clôturées</b></small
-                  >
-                </div>
-                <div class="ibox-content">
-                  <small class="text-left"
-                    ><b>Controle Interne &nbsp;&nbsp;&nbsp; 10</b>
-                    <b class="stat-percent font-bold text-success"
-                      >98% <i class="fa fa-bolt"> </i
-                    ></b> </small
-                  ><br />
-                  <small class="text-left"
-                    ><b>Audit Financier &nbsp;&nbsp; &nbsp;&nbsp; 30</b>
-                    <b class="stat-percent font-bold text-success"
-                      >98% <i class="fa fa-bolt"> </i
-                    ></b>
-                  </small>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-2">
-              <div class="ibox float-e-margins">
-                <div class="ibox-title">
-                  <span class="label label-primary pull-right">Today</span>
-
-                  <small><b style="font-size: 12px">Effectif</b></small>
-                </div>
-                <div class="ibox-content">
-                  <small class="text-left"
-                    ><b style="font-size: 9px"
-                      >Affecté &nbsp;&nbsp;&nbsp;&nbsp;10</b
-                    >
-                    <b class="stat-percent font-bold text-info"
-                      >&nbsp;&nbsp;98% <i class="fa fa-level-up"></i
-                    ></b> </small
-                  ><br />
-                  <small class="text-left"
-                    ><b style="font-size: 9px">à Affecté &nbsp; 20</b>
-                    <b class="stat-percent font-bold text-success"
-                      >20%<i class="fa fa-bolt"> </i
-                    ></b>
-                  </small>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4">
-              <div class="ibox float-e-margins">
-                <div class="ibox-title">
-                  <h5>Evolution taux Affectation</h5>
-                  <div class="ibox-tools">
-                    <span class="label label-primary">Updated 12.2015</span>
-                  </div>
-                </div>
-                <div class="ibox-content no-padding">
-                  <div class="flot-chart m-t-lg" style="height: 55px">
-                    <div class="flot-chart-content" id="flot-chart1"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
+        <div class="row wrapper border-bottom white-bg page-heading">
+          <div class="col-lg-10">
+            <h2>Banques</h2>
           </div>
+          <div class="col-lg-2"></div>
+        </div>
+        <div class="wrapper wrapper-content animated fadeInDown">
           <div class="row">
-            <div class="col-lg-8">
-              <div class="ibox float-e-margins">
-                <div class="ibox-content">
-                  <div>
-                    <h3 class="font-bold no-margins">
-                      Evolution chiffre d'Affaires
-                    </h3>
-                  </div>
+            <div class="col-xl-12">
+              <div>
+                <div class="tab-content">
+                  <div role="tabpanel" id="" class="tab-pane active">
+                    <div class="panel-body">
+                      <div class="row mb-3">
+                        <div
+                          class="col-12 col-sm-12 align-self-center pt-1 pt-sm-0 text-right"
+                        >
+                          <button
+                            data-toggle="modal"
+                            data-target="#myModalSanctions"
+                            class="btn btn-outline btn-primary dim"
+                            title="Ajouter"
+                            type="button"
+                          >
+                            <i class="fa fa-plus"></i>
+                          </button>
+                          <div
+                            class="modal inmodal"
+                            id="myModalSanctions"
+                            tabindex="-1"
+                            role="dialog"
+                            aria-hidden="true"
+                          >
+                            <div class="modal-dialog">
+                              <div class="modal-content animated bounceInRight">
+                                <div class="modal-header">
+                                  <button
+                                    type="button"
+                                    class="close"
+                                    data-dismiss="modal"
+                                  >
+                                    <span aria-hidden="true">&times;</span
+                                    ><span class="sr-only">Fermer</span>
+                                  </button>
+                                  <h6 class="modal-title">Ajouter Sanctions</h6>
+                                </div>
 
-                  <div class="m-t-sm">
-                    <div class="row">
-                      <div class="col-md-8">
-                        <div>
-                          <canvas
-                            id="lineChart"
-                            style="width: 30%; height: 2000%"
-                          ></canvas>
+                                <div class="modal-body">
+                                  <form
+                                    class="form-horizontal"
+                                    class="form-horizontal"
+                                  >
+                                    <div class="form-group row">
+                                      <label class="col-sm-4 col-form-label"
+                                        >Matricule</label
+                                      >
+                                      <div class="col-sm-6">
+                                        <select class="form-control">
+                                          <option value="flotte1">
+                                            1213HU
+                                          </option>
+                                          <option value="flotte2">
+                                            1213HU
+                                          </option>
+                                          <option value="flotte3">
+                                            1213HU
+                                          </option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                    <div class="form-group row">
+                                      <label class="col-sm-4 col-form-label"
+                                        >Nom et Prénom</label
+                                      >
+                                      <div class="col-sm-6">
+                                        <input
+                                          class="form-control"
+                                          placeholder="nom et prenom"
+                                        />
+                                      </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                      <label class="col-sm-4 col-form-label"
+                                        >Direction</label
+                                      >
+                                      <div class="col-sm-6">
+                                        <input
+                                          class="form-control"
+                                          placeholder="Direction"
+                                        />
+                                      </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                      <label class="col-sm-4 col-form-label"
+                                        >Département</label
+                                      >
+                                      <div class="col-sm-6">
+                                        <input
+                                          class="form-control"
+                                          placeholder="Département"
+                                        />
+                                      </div>
+                                    </div>
+                                    <div class="form-group row">
+                                      <label class="col-sm-4 col-form-label"
+                                        >Fonction</label
+                                      >
+                                      <div class="col-sm-6">
+                                        <input
+                                          class="form-control"
+                                          placeholder="Fonction"
+                                        />
+                                      </div>
+                                    </div>
+                                    <div class="form-group row">
+                                      <label class="col-sm-4 col-form-label"
+                                        >Sanction</label
+                                      >
+                                      <div class="col-sm-6">
+                                        <select class="form-control">
+                                          <option value="flotte1">
+                                            Observation
+                                          </option>
+                                          <option value="flotte2">
+                                            Avertissment
+                                          </option>
+                                          <option value="flotte3">
+                                            Mise a pieds
+                                            <select class="form-control">
+                                              <option value="flotte1">
+                                                Nombre de jours
+                                              </option>
+                                            </select>
+                                          </option>
+
+                                          <option value="flotte3">
+                                            Révocation
+                                          </option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                    <div class="form-group row">
+                                      <label class="col-sm-4 col-form-label"
+                                        >Date d'effet</label
+                                      >
+                                      <div class="col-sm-6">
+                                        <input
+                                          type="date"
+                                          class="form-control"
+                                          placeholder="Fonction"
+                                        />
+                                      </div>
+                                    </div>
+                                    <div class="form-group row">
+                                      <label class="col-sm-4 col-form-label"
+                                        >PJ</label
+                                      >
+                                      <div class="col-sm-6">
+                                        <input
+                                          class="form-control"
+                                          placeholder="Fonction"
+                                        />
+                                      </div>
+                                    </div>
+                                    <div class="row" class="text-right">
+                                      <div class="modal-footer">
+                                        <input
+                                          type="submit"
+                                          class="btn btn-xs btn-default"
+                                          data-dismiss="modal"
+                                          value="Annuler"
+                                        />
+                                        <input
+                                          type="submit"
+                                          data-dismiss="modal"
+                                          class="btn btn-xs btn-primary"
+                                          value="Ajouter"
+                                        />
+                                      </div>
+                                    </div>
+                                  </form>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <button
+                            id="upload"
+                            type="button"
+                            class="btn btn-outline btn-info dim"
+                            data-toggle="modal"
+                            data-target="#modal_clients_upload"
+                            data-whatever="5"
+                            title="PDF"
+                          >
+                            <i class="fa fa-file-pdf-o"></i>
+                          </button>
+                          <button
+                            class="btn btn-outline btn-info dim export_modele"
+                            data-whatever="5"
+                            title="Excel"
+                          >
+                            <i class="fa fa-file-excel-o"></i>
+                          </button>
                         </div>
                       </div>
-                      <div class="col-md-4">
-                        <ul class="stat-list m-t-lg">
-                          <li>
-                            <h2 class="no-margins">2,346</h2>
-                            <small>Chiffre d'affaires du mois </small>
-                            <div class="progress progress-mini">
+                      <div class="table-responsive">
+                        <div
+                          id="table_clients_wrapper"
+                          class="dataTables_wrapper dt-bootstrap4 no-footer"
+                        >
+                          <div class="row">
+                            <div class="col-sm-12 col-md-2">
                               <div
-                                class="progress-bar"
-                                style="width: 48%"
-                              ></div>
+                                class="dataTables_length"
+                                id="table_clients_length"
+                              >
+                                <label>
+                                  <select class="form-control">
+                                    <option selected>Années</option>
+                                    <option value="ClientX">1999</option>
+                                    <option value="ClientX">1998</option>
+                                    <option value="ClientX">
+                                      1997
+                                    </option></select
+                                  ><br />
+                                </label>
+                              </div>
                             </div>
-                          </li>
-                          <li>
-                            <h2 class="no-margins">4,422</h2>
-                            <small>Chiffre d'affaires de l'exercice</small>
-                            <div class="progress progress-mini">
+                            <div class="col-sm-12 col-md-2">
                               <div
-                                class="progress-bar"
-                                style="width: 60%"
-                              ></div>
+                                id="table_clients_filter"
+                                class="dataTables_filter"
+                              >
+                                <select class="form-control">
+                                  <option selected>Mois</option>
+                                  <option value="ClientX">Janviér</option>
+                                  <option value="ClientX">Février</option>
+                                  <option value="ClientX">Mars</option>
+                                  <option value="ClientX">Avril</option>
+                                  <option value="ClientX">Mai</option>
+                                  <option value="ClientX">Juin</option>
+                                  <option value="ClientX">Juillet</option>
+                                  <option value="ClientX">Aout</option>
+                                  <option value="ClientX">Septembre</option>
+                                  <option value="ClientX">Octobre</option>
+                                  <option value="ClientX">Novembre</option>
+
+                                  <option value="ClientX">
+                                    Décembre
+                                  </option></select
+                                ><br />
+                              </div>
                             </div>
-                          </li>
-                          <li>
-                            <h2 class="no-margins">4,345</h2>
-                            <small
-                              >Chiffre d'affaires de l'exercice précedent</small
-                            >
-                            <div class="progress progress-mini">
-                              <div
-                                class="progress-bar"
-                                style="width: 60%"
-                              ></div>
-                            </div>
-                          </li>
-                        </ul>
+                          </div>
+
+                          <div>
+                            <body>
+                              <div class="container py-4">
+                                <div class="row align-items-end g-3 mb-3">
+                                  <div class="col-12 col-lg-6">
+                                    <h1 class="h3 mb-1">
+                                      Cours des devises / TND
+                                    </h1>
+                                    <p class="text-muted mb-0">
+                                      Tableau responsive avec image du pays,
+                                      sigle, unité et valeur (achat/vente).
+                                      Remplacez les valeurs par les taux réels
+                                      de votre banque.
+                                    </p>
+                                  </div>
+                                  <div class="col-6 col-lg-3">
+                                    <label class="form-label mb-1"
+                                      >Banque</label
+                                    >
+                                    <select id="bankFilter" class="form-select">
+                                      <option value="">
+                                        Toutes les banques
+                                      </option>
+                                      <option>BIAT</option>
+                                      <option>BNA</option>
+                                      <option>ATB</option>
+                                      <option>UIB</option>
+                                    </select>
+                                  </div>
+                                  <div class="col-6 col-lg-3">
+                                    <label class="form-label mb-1"
+                                      >Recherche</label
+                                    >
+                                    <input
+                                      id="searchInput"
+                                      type="search"
+                                      class="form-control"
+                                      placeholder="USD, EUR, Pound..."
+                                    />
+                                  </div>
+                                </div>
+
+                                <div class="card">
+                                  <div class="card-body p-0">
+                                    <div class="table-responsive">
+                                      <table
+                                        class="table table-hover table-striped mb-0"
+                                        id="ratesTable"
+                                      >
+                                        <thead class="table-light">
+                                          <tr>
+                                            <th style="min-width: 140px">
+                                              Banque
+                                            </th>
+                                            <th style="min-width: 220px">
+                                              Devise
+                                            </th>
+                                            <th>Sigle</th>
+                                            <th>Unité</th>
+                                            <th>Achat</th>
+                                            <th>Vente</th>
+                                            <th style="min-width: 140px">
+                                              Maj
+                                            </th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <!-- EXEMPLES: Remplacez les logos/taux par vos données réelles -->
+                                          <tr data-bank="BIAT">
+                                            <td>
+                                              <div
+                                                class="d-flex align-items-center gap-2"
+                                              >
+                                                <img
+                                                  class="bank-logo"
+                                                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/BIAT_logo.svg/64px-BIAT_logo.svg.png"
+                                                  alt="BIAT"
+                                                  onerror="this.style.display='none'"
+                                                />
+                                                <span
+                                                  class="badge text-bg-primary-subtle badge-bank"
+                                                  >BIAT</span
+                                                >
+                                              </div>
+                                            </td>
+                                            <td>
+                                              <div
+                                                class="d-flex align-items-center gap-2"
+                                              >
+                                                <img
+                                                  class="flag"
+                                                  src="https://flagcdn.com/w40/us.png"
+                                                  alt="USA"
+                                                />
+                                                <div>
+                                                  <div class="fw-semibold">
+                                                    Dollar Américain
+                                                  </div>
+                                                  <small class="text-muted"
+                                                    >United States</small
+                                                  >
+                                                </div>
+                                              </div>
+                                            </td>
+                                            <td class="fw-semibold">USD</td>
+                                            <td>1</td>
+                                            <td>
+                                              <span class="rate-up">3.150</span>
+                                            </td>
+                                            <td>3.210</td>
+                                            <td>
+                                              <small class="text-muted"
+                                                >18-08-2025 10:30</small
+                                              >
+                                            </td>
+                                          </tr>
+
+                                          <tr data-bank="BIAT">
+                                            <td>
+                                              <div
+                                                class="d-flex align-items-center gap-2"
+                                              >
+                                                <img
+                                                  class="bank-logo"
+                                                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/BIAT_logo.svg/64px-BIAT_logo.svg.png"
+                                                  alt="BIAT"
+                                                  onerror="this.style.display='none'"
+                                                />
+                                                <span
+                                                  class="badge text-bg-primary-subtle badge-bank"
+                                                  >BIAT</span
+                                                >
+                                              </div>
+                                            </td>
+                                            <td>
+                                              <div
+                                                class="d-flex align-items-center gap-2"
+                                              >
+                                                <img
+                                                  class="flag"
+                                                  src="https://flagcdn.com/w40/eu.png"
+                                                  alt="EU"
+                                                />
+                                                <div>
+                                                  <div class="fw-semibold">
+                                                    Euro
+                                                  </div>
+                                                  <small class="text-muted"
+                                                    >Union Européenne</small
+                                                  >
+                                                </div>
+                                              </div>
+                                            </td>
+                                            <td class="fw-semibold">EUR</td>
+                                            <td>1</td>
+                                            <td>3.350</td>
+                                            <td>
+                                              <span class="rate-up">3.420</span>
+                                            </td>
+                                            <td>
+                                              <small class="text-muted"
+                                                >18-08-2025 10:30</small
+                                              >
+                                            </td>
+                                          </tr>
+
+                                          <tr data-bank="BNA">
+                                            <td>
+                                              <div
+                                                class="d-flex align-items-center gap-2"
+                                              >
+                                                <img
+                                                  class="bank-logo"
+                                                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/BNA_Banque_logo.png/64px-BNA_Banque_logo.png"
+                                                  alt="BNA"
+                                                  onerror="this.style.display='none'"
+                                                />
+                                                <span
+                                                  class="badge text-bg-success-subtle badge-bank"
+                                                  >BNA</span
+                                                >
+                                              </div>
+                                            </td>
+                                            <td>
+                                              <div
+                                                class="d-flex align-items-center gap-2"
+                                              >
+                                                <img
+                                                  class="flag"
+                                                  src="https://flagcdn.com/w40/gb.png"
+                                                  alt="UK"
+                                                />
+                                                <div>
+                                                  <div class="fw-semibold">
+                                                    Livre Sterling
+                                                  </div>
+                                                  <small class="text-muted"
+                                                    >United Kingdom</small
+                                                  >
+                                                </div>
+                                              </div>
+                                            </td>
+                                            <td class="fw-semibold">GBP</td>
+                                            <td>1</td>
+                                            <td>3.940</td>
+                                            <td>4.020</td>
+                                            <td>
+                                              <small class="text-muted"
+                                                >18-08-2025 09:55</small
+                                              >
+                                            </td>
+                                          </tr>
+
+                                          <tr data-bank="ATB">
+                                            <td>
+                                              <div
+                                                class="d-flex align-items-center gap-2"
+                                              >
+                                                <img
+                                                  class="bank-logo"
+                                                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/ATB_Bank_Logo.png/64px-ATB_Bank_Logo.png"
+                                                  alt="ATB"
+                                                  onerror="this.style.display='none'"
+                                                />
+                                                <span
+                                                  class="badge text-bg-danger-subtle badge-bank"
+                                                  >ATB</span
+                                                >
+                                              </div>
+                                            </td>
+                                            <td>
+                                              <div
+                                                class="d-flex align-items-center gap-2"
+                                              >
+                                                <img
+                                                  class="flag"
+                                                  src="https://flagcdn.com/w40/sa.png"
+                                                  alt="Saudi Arabia"
+                                                />
+                                                <div>
+                                                  <div class="fw-semibold">
+                                                    Riyal Saoudien
+                                                  </div>
+                                                  <small class="text-muted"
+                                                    >Saudi Arabia</small
+                                                  >
+                                                </div>
+                                              </div>
+                                            </td>
+                                            <td class="fw-semibold">SAR</td>
+                                            <td>10</td>
+                                            <td>8.390</td>
+                                            <td>8.520</td>
+                                            <td>
+                                              <small class="text-muted"
+                                                >18-08-2025 11:05</small
+                                              >
+                                            </td>
+                                          </tr>
+
+                                          <tr data-bank="UIB">
+                                            <td>
+                                              <div
+                                                class="d-flex align-items-center gap-2"
+                                              >
+                                                <img
+                                                  class="bank-logo"
+                                                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/UIB_Logo.png/64px-UIB_Logo.png"
+                                                  alt="UIB"
+                                                  onerror="this.style.display='none'"
+                                                />
+                                                <span
+                                                  class="badge text-bg-warning-subtle badge-bank"
+                                                  >UIB</span
+                                                >
+                                              </div>
+                                            </td>
+                                            <td>
+                                              <div
+                                                class="d-flex align-items-center gap-2"
+                                              >
+                                                <img
+                                                  class="flag"
+                                                  src="https://flagcdn.com/w40/ma.png"
+                                                  alt="Morocco"
+                                                />
+                                                <div>
+                                                  <div class="fw-semibold">
+                                                    Dirham Marocain
+                                                  </div>
+                                                  <small class="text-muted"
+                                                    >Morocco</small
+                                                  >
+                                                </div>
+                                              </div>
+                                            </td>
+                                            <td class="fw-semibold">MAD</td>
+                                            <td>10</td>
+                                            <td>3.150</td>
+                                            <td>3.290</td>
+                                            <td>
+                                              <small class="text-muted"
+                                                >18-08-2025 08:40</small
+                                              >
+                                            </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </div>
+                                  </div>
+                                  <div
+                                    class="card-footer d-flex justify-content-between align-items-center"
+                                  >
+                                    <small class="text-muted"
+                                      >Devise ↔︎ Dinar Tunisien (TND). Les
+                                      chiffres sont <u>exemple</u>.</small
+                                    >
+                                    <small class="text-muted"
+                                      >Dernière mise à jour manuelle :
+                                      18/08/2025</small
+                                    >
+                                  </div>
+                                </div>
+
+                                <div class="mt-3">
+                                  <button
+                                    id="exportCsv"
+                                    class="btn btn-outline-secondary btn-sm"
+                                  >
+                                    Exporter CSV
+                                  </button>
+                                  <button
+                                    id="resetFilters"
+                                    class="btn btn-outline-secondary btn-sm"
+                                  >
+                                    Réinitialiser filtres
+                                  </button>
+                                </div>
+                              </div>
+
+                              <script>
+                                // Filtre banque
+                                const bankFilter =
+                                  document.getElementById("bankFilter");
+                                const searchInput =
+                                  document.getElementById("searchInput");
+                                const rows = Array.from(
+                                  document.querySelectorAll(
+                                    "#ratesTable tbody tr"
+                                  )
+                                );
+
+                                function applyFilters() {
+                                  const bank = bankFilter.value
+                                    .trim()
+                                    .toLowerCase();
+                                  const q = searchInput.value
+                                    .trim()
+                                    .toLowerCase();
+                                  rows.forEach((tr) => {
+                                    const matchesBank =
+                                      !bank ||
+                                      (tr.dataset.bank || "").toLowerCase() ===
+                                        bank;
+                                    const text = tr.innerText.toLowerCase();
+                                    const matchesSearch =
+                                      !q || text.includes(q);
+                                    tr.style.display =
+                                      matchesBank && matchesSearch
+                                        ? ""
+                                        : "none";
+                                  });
+                                }
+                                bankFilter.addEventListener(
+                                  "change",
+                                  applyFilters
+                                );
+                                searchInput.addEventListener(
+                                  "input",
+                                  applyFilters
+                                );
+
+                                // Réinitialiser
+                                document
+                                  .getElementById("resetFilters")
+                                  .addEventListener("click", () => {
+                                    bankFilter.value = "";
+                                    searchInput.value = "";
+                                    applyFilters();
+                                  });
+
+                                // Export CSV simple
+                                document
+                                  .getElementById("exportCsv")
+                                  .addEventListener("click", () => {
+                                    const headers = Array.from(
+                                      document.querySelectorAll(
+                                        "#ratesTable thead th"
+                                      )
+                                    ).map((th) => th.textContent.trim());
+                                    const visibleRows = rows.filter(
+                                      (tr) => tr.style.display !== "none"
+                                    );
+                                    const lines = [headers.join(",")];
+                                    visibleRows.forEach((tr) => {
+                                      const cells = Array.from(
+                                        tr.querySelectorAll("td")
+                                      );
+                                      const bank = (cells[0].innerText || "")
+                                        .trim()
+                                        .replace(/\s+/g, " ");
+                                      const devise = (cells[1].innerText || "")
+                                        .trim()
+                                        .replace(/\s+/g, " ");
+                                      const sigle = (
+                                        cells[2].innerText || ""
+                                      ).trim();
+                                      const unite = (
+                                        cells[3].innerText || ""
+                                      ).trim();
+                                      const achat = (
+                                        cells[4].innerText || ""
+                                      ).trim();
+                                      const vente = (
+                                        cells[5].innerText || ""
+                                      ).trim();
+                                      const maj = (
+                                        cells[6].innerText || ""
+                                      ).trim();
+                                      lines.push(
+                                        [
+                                          bank,
+                                          devise,
+                                          sigle,
+                                          unite,
+                                          achat,
+                                          vente,
+                                          maj,
+                                        ]
+                                          .map(
+                                            (v) =>
+                                              '"' +
+                                              v.replaceAll('"', '""') +
+                                              '"'
+                                          )
+                                          .join(",")
+                                      );
+                                    });
+                                    const blob = new Blob([lines.join("\n")], {
+                                      type: "text/csv;charset=utf-8;",
+                                    });
+                                    const url = URL.createObjectURL(blob);
+                                    const a = document.createElement("a");
+                                    a.href = url;
+                                    a.download = "cours-devises-tnd.csv";
+                                    a.click();
+                                    URL.revokeObjectURL(url);
+                                  });
+                              </script>
+                              <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+                            </body>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-lg-4">
-              <div class="ibox float-e-margins">
-                <div class="ibox-title">
-                  <h5>Missions En Cours</h5>
-                  <div class="ibox-tools">
-                    <a class="collapse-link">
-                      <i class="fa fa-chevron-up"></i>
-                    </a>
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                      <i class="fa fa-wrench"></i>
-                    </a>
-                    <ul class="dropdown-menu dropdown-user">
-                      <li><a href="#">Config option 1</a></li>
-                      <li><a href="#">Config option 2</a></li>
-                    </ul>
-                    <a class="close-link">
-                      <i class="fa fa-times"></i>
-                    </a>
-                  </div>
-                </div>
-                <div class="ibox-content">
-                  <table class="table table-hover">
-                    <thead>
-                      <tr>
-                        <th>Clients</th>
-                        <th>Progression</th>
-                        <th>Restant</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>Haifa Dali</td>
-                        <td class="text-center">
-                          <span class="pie">0.52,1.041</span>
-                        </td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td>Mahmoud Karabaka</td>
-                        <td class="text-center">
-                          <span class="pie">226,134</span>
-                        </td>
-                        <td><b style="color: rgb(32, 157, 84)"> 3</b></td>
-                      </tr>
-                      <tr>
-                        <td>Ichrak Cherif</td>
-                        <td class="text-center">
-                          <span class="pie">0.52/1.561</span>
-                        </td>
-                        <td></td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
           </div>
-          <br />
-          <div class="row">
-            <div class="col-md-4">
-              <small><b>Top 5 Chefs de mission (Par Mission) </b></small>
-              <ul class="list-group clear-list m-t">
-                <li class="list-group-item fist-item">
-                  <span class="label label-success">1</span>&nbsp;&nbsp; Amine
-                  Kesntini &nbsp;&nbsp;
-                  <span class="pull-right"
-                    >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <b>10</b>
-                  </span>
-                </li>
-                <li class="list-group-item">
-                  <span class="label label-info">2</span>&nbsp;&nbsp;Nizar Samet
-                  &nbsp;&nbsp;&nbsp;&nbsp; &emsp; &emsp; &emsp;
-                  <span class="pull-right"
-                    >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <b>6</b></span
-                  >
-                </li>
-                <li class="list-group-item">
-                  <span class="label label-primary">3</span>&nbsp;&nbsp; Open
-                  new shop&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  <span class="pull-right"
-                    >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b
-                      >4</b
-                    >
-                  </span>
-                </li>
-                <li class="list-group-item fist-item">
-                  <span class="label label-info">4</span>&nbsp;&nbsp; Amine
-                  Kesntini &nbsp;&nbsp;
-                  <span class="pull-right"
-                    >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <b>10</b>
-                  </span>
-                </li>
-                <li class="list-group-item fist-item">
-                  <span class="label label-success">5</span>&nbsp;&nbsp; Amine
-                  Kesntini &nbsp;&nbsp;
-                  <span class="pull-right"
-                    >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <b>10</b>
-                  </span>
-                </li>
-              </ul>
+
+          <div class="footer">
+            <div class="pull-right">
+              Il vous reste <strong>24740 points</strong>
             </div>
-
-            <div class="col-md-4">
-              <small><b>Top 5 Auditeur (Par Section) </b></small>
-              <ul class="list-group clear-list m-t">
-                <li class="list-group-item fist-item">
-                  <span class="label label-success">1</span>&nbsp;&nbsp; Haifa
-                  Hadj Mohamed&nbsp;&nbsp;
-                  <span class="pull-right"
-                    >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <b>7</b>
-                  </span>
-                </li>
-                <li class="list-group-item">
-                  <span class="label label-info">2</span>&nbsp;&nbsp;Mahmoud
-                  Karabaka&nbsp;&nbsp;&nbsp;&nbsp; &emsp; &emsp; &emsp;
-                  <span class="pull-right"
-                    >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <b>6</b></span
-                  >
-                </li>
-                <li class="list-group-item">
-                  <span class="label label-primary">3</span>&nbsp;&nbsp; Open
-                  new shop&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  <span class="pull-right"
-                    >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b
-                      >4</b
-                    >
-                  </span>
-                </li>
-                <li class="list-group-item fist-item">
-                  <span class="label label-primary">4</span>&nbsp;&nbsp; Haifa
-                  Hadj Mohamed&nbsp;&nbsp;
-                  <span class="pull-right"
-                    >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <b>7</b>
-                  </span>
-                </li>
-                <li class="list-group-item fist-item">
-                  <span class="label label-success">5</span>&nbsp;&nbsp; Haifa
-                  Hadj Mohamed&nbsp;&nbsp;
-                  <span class="pull-right"
-                    >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <b>7</b>
-                  </span>
-                </li>
-              </ul>
-            </div>
-            <div class="col-md-4">
-              <small><b>Top 5 Auditeur (Par Sous Section) </b></small>
-              <ul class="list-group clear-list m-t">
-                <li class="list-group-item fist-item">
-                  <span class="label label-success">1</span>&nbsp;&nbsp; Haifa
-                  Hadj Mohamed&nbsp;&nbsp;
-                  <span class="pull-right"
-                    >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <b>7</b>
-                  </span>
-                </li>
-                <li class="list-group-item">
-                  <span class="label label-info">2</span>&nbsp;&nbsp;Mahmoud
-                  Karabaka&nbsp;&nbsp;&nbsp;&nbsp; &emsp; &emsp; &emsp;
-                  <span class="pull-right"
-                    >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <b>6</b></span
-                  >
-                </li>
-                <li class="list-group-item">
-                  <span class="label label-primary">3</span>&nbsp;&nbsp; Open
-                  new shop &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  <span class="pull-right"
-                    >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b
-                      >4</b
-                    >
-                  </span>
-                </li>
-                <li class="list-group-item">
-                  <span class="label label-primary">4</span>&nbsp;&nbsp;Mahmoud
-                  Karabaka&nbsp;&nbsp;&nbsp;&nbsp; &emsp; &emsp; &emsp;
-                  <span class="pull-right"
-                    >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <b>6</b></span
-                  >
-                </li>
-                <li class="list-group-item">
-                  <span class="label label-info">5</span>&nbsp;&nbsp;Mahmoud
-                  Karabaka&nbsp;&nbsp;&nbsp;&nbsp; &emsp; &emsp; &emsp;
-                  <span class="pull-right"
-                    >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <b>6</b></span
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
-          <br /><br />
-          <div class="row">
-            <div class="col-lg-6">
-              <div class="ibox">
-                <div class="ibox-content">
-                  <h3 class="text-center">Missions en instance</h3>
-
-                  <h5>Clients</h5>
-
-                  <ul class="sortable-list connectList agile-list" id="todo">
-                    <li class="warning-element" id="task1">
-                      <div class="row">
-                        <div class="col-md-8">
-                          NACEUR AUTOMOBILE SERVICES<i
-                            class="fa fa-clock-o"
-                          ></i>
-                          2023
-                        </div>
-                        <div class="col-md-3 text-right">
-                          <input
-                            value="Renouveler"
-                            class="btn btn-xs btn-primary"
-                          />
-                        </div>
-                      </div>
-                    </li>
-
-                    <li class="success-element" id="task2">
-                      <div class="row">
-                        <div class="col-md-8">
-                          K2A CONSULTING <i class="fa fa-clock-o"></i> 2023
-                        </div>
-
-                        <div class="col-md-3 text-right">
-                          <input
-                            value="Renouveler"
-                            class="btn btn-xs btn-primary"
-                          />
-                        </div>
-                      </div>
-                    </li>
-                    <li class="info-element" id="task3">
-                      <div class="row">
-                        <div class="col-md-8">
-                          ZITOUNA LOGESTICS SERVICES<i
-                            class="fa fa-clock-o"
-                          ></i>
-                          2023
-                        </div>
-                        <div class="col-md-3 text-right">
-                          <input
-                            value="Renouveler"
-                            class="btn btn-xs btn-primary"
-                          />
-                        </div>
-                      </div>
-                    </li>
-                    <li class="danger-element" id="task4">
-                      <div class="row">
-                        <div class="col-md-8">
-                          WARAM MEDICAL <i class="fa fa-clock-o"></i> 2023
-                        </div>
-
-                        <div class="col-md-3 text-right">
-                          <input
-                            value="Renouveler"
-                            class="btn btn-xs btn-primary"
-                          />
-                        </div>
-                      </div>
-                    </li>
-                    <li class="warning-element" id="task5">
-                      <div class="row">
-                        <div class="col-md-8">
-                          MUREX BUSINESS SOLUTIONS
-                          <i class="fa fa-clock-o"></i> 2023
-                        </div>
-                        <div class="col-md-3 text-right">
-                          <input
-                            value="Renouveler"
-                            class="btn btn-xs btn-primary"
-                          />
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="ibox">
-                <div class="ibox-content">
-                  <h3 class="text-center">Mondats Expirés</h3>
-
-                  <h5>Clients</h5>
-
-                  <ul class="sortable-list connectList agile-list" id="todo">
-                    <li class="warning-element" id="task1">
-                      <div class="row">
-                        <div class="col-md-8">
-                          MUREX BUSINESS SOLUTIONS
-                          <i class="fa fa-clock-o"></i> 2021-2023
-                        </div>
-                        <div class="col-md-3 text-right">
-                          <input
-                            value="Renouveler"
-                            class="btn btn-xs btn-primary"
-                          />
-                        </div>
-                      </div>
-                    </li>
-                    <li class="success-element" id="task2">
-                      <div class="row">
-                        <div class="col-md-8">
-                          BIJOUX PHARMA <i class="fa fa-clock-o"></i> 2021-2023
-                        </div>
-                        <div class="col-md-3 text-right">
-                          <input
-                            value="Renouveler"
-                            class="btn btn-xs btn-primary"
-                          />
-                        </div>
-                      </div>
-                    </li>
-                    <li class="info-element" id="task3">
-                      <div class="row">
-                        <div class="col-md-8">
-                          MUREX DIGITAL AGENCY
-                          <i class="fa fa-clock-o"></i> 2021-2023
-                        </div>
-                        <div class="col-md-3 text-right">
-                          <input
-                            value="Renouveler"
-                            class="btn btn-xs btn-primary"
-                          />
-                        </div>
-                      </div>
-                    </li>
-                    <li class="danger-element" id="task4">
-                      <div class="row">
-                        <div class="col-md-8">
-                          MULTIPLOGY<i class="fa fa-clock-o"></i> 2021-2023
-                        </div>
-                        <div class="col-md-3 text-right">
-                          <input
-                            value="Renouveler"
-                            class="btn btn-xs btn-primary"
-                          />
-                        </div>
-                      </div>
-                    </li>
-                    <li class="warning-element" id="task5">
-                      <div class="row">
-                        <div class="col-md-8">
-                          CELLVITAL NUTRITION
-                          <i class="fa fa-clock-o"></i> 2021-2023
-                        </div>
-                        <div class="col-md-3 text-right">
-                          <input
-                            value="Renouveler"
-                            class="btn btn-xs btn-primary"
-                          />
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="footer">
-          <div class="pull-right">
-            Il vous reste  <strong>24740 points</strong>
           </div>
           <div class="pull-Center">10GB of <strong>250GB</strong> Free.</div>
         </div>

@@ -265,7 +265,7 @@
         </div>
         <div class="row wrapper border-bottom white-bg page-heading">
           <div class="col-lg-10">
-            <h2>Clients</h2>
+            <h2>Details Banques</h2>
           </div>
           <div class="col-lg-2"></div>
         </div>
@@ -309,12 +309,14 @@
                                     ><span class="sr-only">Fermer</span>
                                   </button>
 
-                                  <h4 class="modal-title">Ajouter Client</h4>
+                                  <h4 class="modal-title">Ajouter Banque</h4>
                                 </div>
                                 <div class="modal-body">
                                   <form class="form-horizontal">
                                     <div class="form-group row">
-                                      <label class="col-sm-4">Code</label>
+                                      <label class="col-sm-4"
+                                        >Nom de La Banque</label
+                                      >
                                       <div class="col-sm-8">
                                         <input
                                           class="form-control"
@@ -323,17 +325,30 @@
                                       </div>
                                     </div>
                                     <div class="form-group row">
-                                      <label class="col-sm-4">Intitulé</label>
+                                      <label class="col-sm-4">
+                                        N°Compte/RIB</label
+                                      >
                                       <div class="col-sm-8">
                                         <input
                                           class="form-control"
                                           placeholder=""
                                         />
+                                      </div>
+                                    </div>
+                                    <div class="form-group row">
+                                      <label class="col-sm-4">Devise</label>
+                                      <div class="col-sm-8">
+                                        <select class="form-control">
+                                          <option selected>TND</option>
+                                          <option>USD</option>
+                                          <option>EUR</option>
+                                          <option>Dollar</option>
+                                        </select>
                                       </div>
                                     </div>
                                     <div class="form-group row">
                                       <label class="col-sm-4"
-                                        >Matricule Fiscal</label
+                                        >Code Journal</label
                                       >
                                       <div class="col-sm-8">
                                         <input
@@ -344,17 +359,8 @@
                                     </div>
                                     <div class="form-group row">
                                       <label class="col-sm-4"
-                                        >Nbre Banque</label
+                                        >Compte Comptable</label
                                       >
-                                      <div class="col-sm-8">
-                                        <input
-                                          class="form-control"
-                                          placeholder=""
-                                        />
-                                      </div>
-                                    </div>
-                                    <div class="form-group row">
-                                      <label class="col-sm-4">Nbre RIB</label>
                                       <div class="col-sm-8">
                                         <input
                                           class="form-control"
@@ -468,7 +474,7 @@
                                       aria-label="Intitulé : activer pour trier la colonne par ordre croissant"
                                       style="width: 10%"
                                     >
-                                      Code
+                                      Banque
                                     </th>
                                     <th
                                       class="sorting"
@@ -479,7 +485,7 @@
                                       aria-label="Intitulé : activer pour trier la colonne par ordre croissant"
                                       style="width: 10%"
                                     >
-                                      Intitulé
+                                      N°Compte/RIB
                                     </th>
                                     <th
                                       class="sorting"
@@ -490,7 +496,7 @@
                                       aria-label="Type : activer pour trier la colonne par ordre croissant"
                                       style="width: 10%"
                                     >
-                                      Matricule Fiscal
+                                      Devise
                                     </th>
                                     <th
                                       class="sorting"
@@ -501,7 +507,7 @@
                                       aria-label="Type : activer pour trier la colonne par ordre croissant"
                                       style="width: 10%"
                                     >
-                                      Nbre Banque
+                                      Code Journal
                                     </th>
                                     <th
                                       class="sorting"
@@ -512,7 +518,18 @@
                                       aria-label="Type : activer pour trier la colonne par ordre croissant"
                                       style="width: 10%"
                                     >
-                                      Nbre RIB
+                                      Compte comptable
+                                    </th>
+                                    <th
+                                      class="sorting"
+                                      tabindex="0"
+                                      aria-controls="table_clients"
+                                      rowspan="1"
+                                      colspan="1"
+                                      aria-label="Type : activer pour trier la colonne par ordre croissant"
+                                      style="width: 10%"
+                                    >
+                                      Actif
                                     </th>
                                     <th
                                       class="sorting"
@@ -529,19 +546,24 @@
                                 </thead>
                                 <tbody>
                                   <tr>
-                                    <td>1234E5</td>
-                                    <td>SMS</td>
-                                    <td>SMS</td>
+                                    <td>ATB</td>
+                                    <td>123 23595529254</td>
+                                    <td>TND</td>
 
-                                    <td>
-                                      <a
-                                        href="gestionBanque.html"
-                                        class="text-decoration-none text-dark"
+                                    <td></td>
+                                    <td></td>
+                                    <td class="text-center">
+                                      <div
+                                        class="form-check form-switch d-flex justify-content-center"
                                       >
-                                        Détails Banque
-                                      </a>
+                                        <input
+                                          class="form-check-input"
+                                          type="checkbox"
+                                          id="activeSwitch1"
+                                          checked
+                                        />
+                                      </div>
                                     </td>
-                                    <td>23 456 789</td>
                                     <td class="overflow-hidden">
                                       <div class="btn-group">
                                         <button
@@ -562,19 +584,24 @@
                                     </td>
                                   </tr>
                                   <tr>
-                                    <td>1234E5</td>
-                                    <td>SMS</td>
-                                    <td>SMS</td>
+                                    <td>ATB</td>
+                                    <td>123 23595529254</td>
+                                    <td>TND</td>
 
-                                    <td>
-                                      <a
-                                        href="gestionBanque.html"
-                                        class="text-decoration-none text-dark"
+                                    <td></td>
+                                    <td></td>
+                                    <td class="text-center">
+                                      <div
+                                        class="form-check form-switch d-flex justify-content-center"
                                       >
-                                        Détails Banque
-                                      </a>
+                                        <input
+                                          class="form-check-input"
+                                          type="checkbox"
+                                          id="activeSwitch1"
+                                          checked
+                                        />
+                                      </div>
                                     </td>
-                                    <td>23 456 789</td>
                                     <td class="overflow-hidden">
                                       <div class="btn-group">
                                         <button
@@ -595,19 +622,23 @@
                                     </td>
                                   </tr>
                                   <tr>
-                                    <td>1234E5</td>
-                                    <td>SMS</td>
-                                    <td>SMS</td>
-
-                                    <td>
-                                      <a
-                                        href="gestionBanque.html"
-                                        class="text-decoration-none text-dark"
+                                    <td>UIB</td>
+                                    <td>256 26598516856</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="text-center">
+                                      <div
+                                        class="form-check form-switch d-flex justify-content-center"
                                       >
-                                        Détails Banque
-                                      </a>
+                                        <input
+                                          class="form-check-input"
+                                          type="checkbox"
+                                          id="activeSwitch1"
+                                          checked
+                                        />
+                                      </div>
                                     </td>
-                                    <td>23 456 789</td>
                                     <td class="overflow-hidden">
                                       <div class="btn-group">
                                         <button
@@ -628,18 +659,60 @@
                                     </td>
                                   </tr>
                                   <tr>
-                                    <td>1234E5</td>
-                                    <td>SMS</td>
-                                    <td>SMS</td>
-                                    <td>
-                                      <a
-                                        href="gestionBanque.html"
-                                        class="text-decoration-none text-dark"
+                                    <td>UIB</td>
+                                    <td>256 26598516856</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="text-center">
+                                      <div
+                                        class="form-check form-switch d-flex justify-content-center"
                                       >
-                                        Détails Banque
-                                      </a>
+                                        <input
+                                          class="form-check-input"
+                                          type="checkbox"
+                                          id="activeSwitch1"
+                                          checked
+                                        />
+                                      </div>
                                     </td>
-                                    <td>23 456 789</td>
+                                    <td class="overflow-hidden">
+                                      <div class="btn-group">
+                                        <button
+                                          data-toggle="dropdown"
+                                          class="btn btn-primary btn-xs dropdown-toggle btn-xs dropdown-toggle"
+                                        >
+                                          Action <span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                          <li>
+                                            <a href="modifier-client.html"
+                                              >Modifier</a
+                                            >
+                                          </li>
+                                          <li><a href="#">Supprimer</a></li>
+                                        </ul>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>UIB</td>
+                                    <td>256 26598516856</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="text-center">
+                                      <div
+                                        class="form-check form-switch d-flex justify-content-center"
+                                      >
+                                        <input
+                                          class="form-check-input"
+                                          type="checkbox"
+                                          id="activeSwitch1"
+                                          checked
+                                        />
+                                      </div>
+                                    </td>
                                     <td class="overflow-hidden">
                                       <div class="btn-group">
                                         <button
