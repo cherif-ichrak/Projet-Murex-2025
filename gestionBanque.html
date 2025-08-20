@@ -93,21 +93,21 @@
             <li>
               <a href="biblio.html"
                 ><i class="fa fa-money"></i>
-                <span class="nav-label">imputation comptable</span></a
+                <span class="nav-label">Imputation comptable</span></a
               >
             </li>
-            <li>
+             <li>
+              <a href="coursDevises.html"
+                ><i class="fa fa-money"></i>
+                <span class="nav-label">Cours Devises</span></a
+              >
+            </li> <li>
               <a href="packClient.html"
                 ><i class="fa fa-shopping-cart"></i>
                 <span class="nav-label">Pack Client</span></a
               >
             </li>
-            <li>
-              <a href="coursDevises.html"
-                ><i class="fa fa-money"></i>
-                <span class="nav-label">Cours Devises</span></a
-              >
-            </li>
+          
             <br /><br />
             <div class="col-12 ownerCard text-center">
               Powered BY
@@ -379,18 +379,15 @@
                                     </div>
                                     <div class="form-group row">
                                       <label class="col-sm-4"
-                                        >Code Journal</label
+                                        >Compte Journal</label
                                       >
                                       <div class="col-sm-8">
-                                        <select
+                                        <input
                                           class="form-control"
                                           placeholder=""
                                         >
-                                          <option></option>
-                                          <option></option>
-                                          <option></option>
-                                          <option></option>
-                                        </select>
+                                        
+                                        </input>
                                       </div>
                                     </div>
                                     <div class="form-group row">
@@ -530,7 +527,7 @@
                                       aria-label="Type : activer pour trier la colonne par ordre croissant"
                                       style="width: 10%"
                                     >
-                                      Code Journal
+                                      Compte Journal
                                     </th>
                                     <th
                                       class="sorting"
@@ -573,8 +570,8 @@
                                     <td>123 23595529254</td>
                                     <td>TND</td>
 
-                                    <td class="text-center">
-                                      <i class="fa fa-file-excel-o"></i>
+                                    <td>
+                                      256895
                                     </td>
                                     <td class="text-center">
                                       <i class="fa fa-file-excel-o"></i>
@@ -601,7 +598,8 @@
                                         </button>
                                         <ul class="dropdown-menu">
                                           <li>
-                                            <a href="modifier-client.html"
+                                            <a   data-toggle="modal"
+                            data-target="#myModalModifierBanque"
                                               >Modifier</a
                                             >
                                           </li>
@@ -615,8 +613,8 @@
                                     <td>123 23595529254</td>
                                     <td>TND</td>
 
-                                    <td class="text-center">
-                                      <i class="fa fa-file-excel-o"></i>
+                                    <td >
+                                      236598
                                     </td>
                                     <td class="text-center">
                                       <i class="fa fa-file-excel-o"></i>
@@ -641,9 +639,10 @@
                                         >
                                           Action <span class="caret"></span>
                                         </button>
-                                        <ul class="dropdown-menu">
+                                          <ul class="dropdown-menu">
                                           <li>
-                                            <a href="modifier-client.html"
+                                            <a   data-toggle="modal"
+                            data-target="#myModalModifierBanque"
                                               >Modifier</a
                                             >
                                           </li>
@@ -656,8 +655,8 @@
                                     <td>UIB</td>
                                     <td>256 26598516856</td>
                                     <td>TND</td>
-                                    <td class="text-center">
-                                      <i class="fa fa-file-excel-o"></i>
+                                    <td >
+                                     236598
                                     </td>
                                     <td class="text-center">
                                       <i class="fa fa-file-excel-o"></i>
@@ -682,9 +681,10 @@
                                         >
                                           Action <span class="caret"></span>
                                         </button>
-                                        <ul class="dropdown-menu">
+                                          <ul class="dropdown-menu">
                                           <li>
-                                            <a href="modifier-client.html"
+                                            <a   data-toggle="modal"
+                            data-target="#myModalModifierBanque"
                                               >Modifier</a
                                             >
                                           </li>
@@ -697,8 +697,8 @@
                                     <td>UIB</td>
                                     <td>256 26598516856</td>
                                     <td>EUR</td>
-                                    <td class="text-center">
-                                      <i class="fa fa-file-excel-o"></i>
+                                    <td >
+                                      223366
                                     </td>
                                     <td class="text-center">
                                       <i class="fa fa-file-excel-o"></i>
@@ -723,9 +723,10 @@
                                         >
                                           Action <span class="caret"></span>
                                         </button>
-                                        <ul class="dropdown-menu">
+                                          <ul class="dropdown-menu">
                                           <li>
-                                            <a href="modifier-client.html"
+                                            <a   data-toggle="modal"
+                            data-target="#myModalModifierBanque"
                                               >Modifier</a
                                             >
                                           </li>
@@ -738,8 +739,8 @@
                                     <td>UIB</td>
                                     <td>256 26598516856</td>
                                     <td>USD</td>
-                                    <td class="text-center">
-                                      <i class="fa fa-file-excel-o"></i>
+                                    <td >
+                                     221144
                                     </td>
                                     <td class="text-center">
                                       <i class="fa fa-file-excel-o"></i>
@@ -764,9 +765,10 @@
                                         >
                                           Action <span class="caret"></span>
                                         </button>
-                                        <ul class="dropdown-menu">
+                                          <ul class="dropdown-menu">
                                           <li>
-                                            <a href="modifier-client.html"
+                                            <a   data-toggle="modal"
+                            data-target="#myModalModifierBanque"
                                               >Modifier</a
                                             >
                                           </li>
@@ -777,7 +779,157 @@
                                   </tr>
                                 </tbody>
                               </table>
+ <div
+                            class="modal inmodal"
+                            id="myModalModifierBanque"
+                            tabindex="-1"
+                            role="dialog"
+                            aria-hidden="true"
+                          >
+                            <div class="modal-dialog">
+                              <div class="modal-content animated bounceInRight">
+                                <div class="modal-header">
+                                  <button
+                                    type="button"
+                                    class="close"
+                                    data-dismiss="modal"
+                                  >
+                                    <span aria-hidden="true">&times;</span
+                                    ><span class="sr-only">Fermer</span>
+                                  </button>
 
+                                  <h4 class="modal-title">Modifier Banque</h4>
+                                </div>
+                                <div class="modal-body">
+                                  <form class="form-horizontal">
+                                    <div class="form-group row">
+                                      <label class="col-sm-4">Nom </label>
+                                      <div class="col-sm-8">
+                                        <select class="form-control">
+                                          <option value="">
+                                            -- Sélectionnez une banque --
+                                          </option>
+                                          <option value="biat">
+                                            BIAT (Banque Internationale Arabe de
+                                            Tunisie)
+                                          </option>
+                                          <option value="bt">
+                                            Banque de Tunisie (BT)
+                                          </option>
+                                          <option value="atb">
+                                            Arab Tunisian Bank (ATB)
+                                          </option>
+                                          <option value="stb">
+                                            Société Tunisienne de Banque (STB)
+                                          </option>
+                                          <option value="zitouna">
+                                            Banque Zitouna
+                                          </option>
+                                          <option value="ubci">
+                                            UBCI (Union Bancaire pour le
+                                            Commerce et l’Industrie)
+                                          </option>
+                                          <option value="bh">
+                                            Banque de l'Habitat (BH Bank)
+                                          </option>
+                                          <option value="bna">
+                                            Banque Nationale Agricole (BNA)
+                                          </option>
+                                          <option value="amen">
+                                            Amen Bank
+                                          </option>
+                                          <option value="qnb">
+                                            QNB Tunisie
+                                          </option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                    <div class="form-group row">
+                                      <label class="col-sm-4">
+                                        N°Compte/RIB</label
+                                      >
+                                      <div class="col-sm-8">
+                                        <input
+                                          class="form-control"
+                                          placeholder=""
+                                        />
+                                      </div>
+                                    </div>
+                                    <div class="form-group row">
+                                      <label class="col-sm-4">Devise</label>
+                                      <div class="col-sm-8">
+                                        <select class="form-control">
+                                          <option selected>TND</option>
+                                          <option>USD</option>
+                                          <option>EUR</option>
+                                          <option>Dollar</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                    <div class="form-group row">
+                                      <label class="col-sm-4"
+                                        >Compte Journal</label
+                                      >
+                                      <div class="col-sm-8">
+                                        <input
+                                          class="form-control"
+                                          placeholder=""
+                                        >
+                                        
+                                        </input>
+                                      </div>
+                                    </div>
+                                    <div class="form-group row">
+                                      <label class="col-sm-4"
+                                        >Compte Comptable</label
+                                      >
+                                      <div class="col-sm-8">
+                                        <select
+                                          class="form-control"
+                                          placeholder=""
+                                        >
+                                          <option></option>
+                                          <option></option>
+                                          <option></option>
+                                          <option></option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                       <div class="form-group row">
+                                      <label class="col-sm-4"
+                                        >Actif</label
+                                      >
+                                      <div class="col-sm-8">
+                                         <input
+                                          class="form-check-input"
+                                          type="checkbox"
+                                          id="activeSwitch1"
+                                          checked
+                                        />
+                                      </div>
+                                    </div>
+
+                                    <div class="row" class="text-right">
+                                      <div class="modal-footer">
+                                        <input
+                                          type="submit"
+                                          class="btn btn-xs btn-default"
+                                          data-dismiss="modal"
+                                          value="Annuler"
+                                        />
+                                        <input
+                                          type="submit"
+                                          data-dismiss="modal"
+                                          class="btn btn-xs btn-primary"
+                                          value="Modifier"
+                                        />
+                                      </div>
+                                    </div>
+                                  </form>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                               <div
                                 id="table_clients_processing"
                                 class="dataTables_processing card"
