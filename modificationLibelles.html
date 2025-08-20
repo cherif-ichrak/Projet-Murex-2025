@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
     <title>Murex Erp HTML</title>
-
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="font-awesome/css/font-awesome.css" rel="stylesheet" />
 
@@ -15,7 +14,6 @@
 
     <!-- Gritter -->
     <link href="js/plugins/gritter/jquery.gritter.css" rel="stylesheet" />
-
     <link href="css/animate.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
   </head>
@@ -85,7 +83,7 @@
                 <span class="nav-label">Traitement relevés </span></a
               >
             </li>
-              <li>
+            <li>
               <a href="modificationLibelles.html"
                 ><i class="fa fa-envelope-open-o"></i>
                 <span class="nav-label">Modification libéllés </span></a
@@ -98,18 +96,19 @@
                 <span class="nav-label">Imputation comptable</span></a
               >
             </li>
-             <li>
+            <li>
               <a href="coursDevises.html"
                 ><i class="fa fa-money"></i>
                 <span class="nav-label">Cours Devises</span></a
               >
-            </li> <li>
+            </li>
+            <li>
               <a href="packClient.html"
                 ><i class="fa fa-shopping-cart"></i>
                 <span class="nav-label">Pack Client</span></a
               >
             </li>
-          
+
             <br /><br />
             <div class="col-12 ownerCard text-center">
               Powered BY
@@ -165,11 +164,7 @@
                   <li>
                     <div class="dropdown-messages-box">
                       <a class="pull-left">
-                        <img
-                          alt="image"
-                          class="img-circle"
-                          src="img/murex.png"
-                        />
+                        <img alt="image" class="img-circle" src="img/a4.jpg" />
                       </a>
                       <div class="media-body">
                         <small class="pull-right text-navy">5h ago</small>
@@ -271,208 +266,268 @@
         </div>
         <div class="row wrapper border-bottom white-bg page-heading">
           <div class="col-lg-10">
-            <h2>Packs Clients</h2>
+            <h2>Modification libéllés</h2>
           </div>
           <div class="col-lg-2"></div>
         </div>
-        <div class="wrapper wrapper-content animated fadeInRight">
-          <div class="ibox-content">
-            <div class="row">
-              <div class="row mb-3">
-                <div
-                  class="col-12 col-sm-12 align-self-center pt-1 pt-sm-0 text-right"
-                ></div>
-              </div>
+        <div class="wrapper wrapper-content animated fadeInDown">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="tabs-container">
+                <div class="tab-content">
+                  <div role="tabpanel" id="" class="tab-pane active">
+                    <div class="panel-body">
+                      <div class="row">
+                        <div class="col-lg-12">
+                          <div class="panel-heading">
+                            <div class="panel-options">
+                              <form>
+                                <div class="form-group row">
+                                  <div class="col-sm-3">
+                                    <select class="form-control">
+                                      <option value="">
+                                        ---------- Choisissez un client
+                                        -----------
+                                      </option>
+                                      <option value="83">CLIENT-1ssaaaa</option>
+                                      <option value="84">NAS</option>
+                                      <option value="85">WARAM</option>
+                                      <option value="86">W</option>
+                                      <option value="87">NEW</option>
+                                    </select>
+                                  </div>
+                                  <div class="col-sm-4">
+                                    <select class="form-control">
+                                      <option value="">
+                                        ---------- Choisissez Banque ----------
+                                      </option>
+                                      <option value="83">CLIENT-1ssaaaa</option>
+                                      <option value="84">NAS</option>
+                                      <option value="85">WARAM</option>
+                                      <option value="86">W</option>
+                                      <option value="87">NEW</option>
+                                    </select>
+                                  </div>
+                                  <div class="col-sm-4">
+                                    <select class="form-control">
+                                      <option value="">
+                                        ---------- Choisissez RIB ----------
+                                      </option>
+                                      <option value="83">
+                                        01 025356 28956
+                                      </option>
+                                      <option value="84">
+                                        01 025356 28956
+                                      </option>
+                                      <option value="85">
+                                        01 025356 28956
+                                      </option>
+                                      <option value="86">
+                                        01 025356 28956
+                                      </option>
+                                      <option value="87">
+                                        01 025356 28956
+                                      </option>
+                                    </select>
+                                  </div>
 
-              <div class="col-sm-3 pull-right">
-                <div class="input-group">
-                  <input
-                    type="text"
-                    placeholder="Rechercher"
-                    class="input-sm form-control"
-                  />
-                  <span class="input-group-btn">
-                    <button type="button" class="btn btn-sm btn-primary">
-                      <i class="fa fa-search"></i>
-                    </button>
-                  </span>
-                </div>
-              </div>
-              <br /><br />
-              <div class="row">
-                <div class="col-lg-3">
-                  <div class="contact-box center-version">
-                    <a>
-                      <img alt="image" class="img-circle" src="img/murex.png" />
+                                  <div class="col-sm-1">
+                                    <button
+                                      id="upload"
+                                      type="button"
+                                      class="btn btn-outline btn-info dim"
+                                      data-toggle="modal"
+                                      data-target="#modal_clients_upload"
+                                      data-whatever="5"
+                                      title="Valider"
+                                    >
+                                      <i class="fa fa-check"></i>
+                                    </button>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-lg-12">
+                              <div class="tabs-container">
+                                <div class="tab-content">
+                                  <div
+                                    role="tabpanel"
+                                    id=""
+                                    class="tab-pane active"
+                                  >
+                                    <div class="panel-body">
+                                      <div class="table-responsive">
+                                        <div
+                                          id="table_clients_wrapper"
+                                          class="dataTables_wrapper dt-bootstrap4 no-footer"
+                                        >
+                                          <div class="row">
+                                            <div class="col-sm-12">
+                                              <table
+                                                id="table_clients"
+                                                class="table table-striped table-bordered table-hover dataTables-example dataTable no-footer"
+                                                role="grid"
+                                                aria-describedby="table_clients_info"
+                                                style="width: 100%"
+                                              >
+                                                <thead>
+                                                  <tr>
+                                                    <th
+                                                      class="sorting"
+                                                      tabindex="0"
+                                                      aria-controls="table_clients"
+                                                      rowspan="1"
+                                                      colspan="1"
+                                                      aria-label="Intitulé : activer pour trier la colonne par ordre croissant"
+                                                      style="width: 10%"
+                                                    >
+                                                      N°
+                                                    </th>
+                                                    <th
+                                                      class="sorting"
+                                                      tabindex="0"
+                                                      aria-controls="table_clients"
+                                                      rowspan="1"
+                                                      colspan="1"
+                                                      aria-label="Intitulé : activer pour trier la colonne par ordre croissant"
+                                                      style="width: 10%"
+                                                    >
+                                                      Libellé
+                                                    </th>
+                                                    <th
+                                                      class="sorting"
+                                                      tabindex="0"
+                                                      aria-controls="table_clients"
+                                                      rowspan="1"
+                                                      colspan="1"
+                                                      aria-label="Intitulé : activer pour trier la colonne par ordre croissant"
+                                                      style="width: 10%"
+                                                    >
+                                                      Synonyme
+                                                    </th>
+                                                  
+                                                    <th
+                                                      class="sorting"
+                                                      tabindex="0"
+                                                      aria-controls="table_clients"
+                                                      rowspan="1"
+                                                      colspan="1"
+                                                      aria-label="Type : activer pour trier la colonne par ordre croissant"
+                                                      style="width: 10%"
+                                                    >
+                                                      Type
+                                                    </th>
+                                                  </tr>
+                                                </thead>
+                                                <tbody>
+                                                  <tr>
+                                                    <td>1</td>
+                                                    <td>
+                                                      <input
+                                                        type="text"
+                                                        placeholder="ANNUL CHEQUE CERTIFIE"
+                                                      />
+                                                    </td>
 
-                      <h3 class="m-b-xs">
-                        <strong>Abonnement Starter</strong
-                        ><span class="product-Number">17TND</span>
-                      </h3>
+                                                    <td>
+                                                      <input
+                                                        type="text"
+                                                        placeholder="ANNUL CHEQUE CERTIFIE"
+                                                      />
+                                                    </td>
+                                                   
+                                                    <td style="color: red">
+                                                      Crédit
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td>2</td>
+                                                    <td>
+                                                      <input
+                                                        type="text"
+                                                        placeholder="CHEQUE CERTIFIE"
+                                                      />
+                                                    </td>
 
-                      <div class="font-bold">Pack de 1000 points</div>
-                      <address class="m-t-md"></address>
-                    </a>
-                    <div class="contact-box-footer">
-                      <div class="m-t-xs btn-group">
-                        <a id="ProfileModifier" class="btn btn-xs btn-white"
-                          ><i class="fa fa-shopping-cart"></i> Acheter
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-3">
-                  <div class="contact-box center-version">
-                    <a>
-                      <img alt="image" class="img-circle" src="img/murex.png" />
+                                                    <td>
+                                                      <input
+                                                        type="text"
+                                                        placeholder="CHEQUE CERTIFIE"
+                                                      />
+                                                    </td>
+                                                   
+                                                    <td style="color: green">
+                                                      Débit
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td>3</td>
+                                                    <td>
+                                                      <input
+                                                        type="text"
+                                                        placeholder="ANNUL CHEQUE CERTIFIE"
+                                                      />
+                                                    </td>
 
-                      <h3 class="m-b-xs">
-                        <strong>Abonnement Basic</strong>
-                        <span class="product-Number">85TND</span>
-                      </h3>
+                                                    <td>
+                                                      <input
+                                                        type="text"
+                                                        placeholder="ANNUL CHEQUE CERTIFIE"
+                                                      />
+                                                    </td>
+                                                   
+                                                    <td style="color: red">
+                                                      Crédit
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td>4</td>
+                                                    <td>
+                                                      <input
+                                                        type="text"
+                                                        placeholder=" CHEQUE CERTIFIE"
+                                                      />
+                                                    </td>
 
-                      <div class="font-bold">Pack de 10000 points</div>
-                      <address class="m-t-md"></address>
-                    </a>
-                    <div class="contact-box-footer">
-                      <div class="m-t-xs btn-group">
-                        <a id="ProfileModifier" class="btn btn-xs btn-white"
-                          ><i class="fa fa-shopping-cart"></i> Acheter
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-3">
-                  <div class="contact-box center-version">
-                    <a>
-                      <img alt="image" class="img-circle" src="img/murex.png" />
-
-                      <h3 class="m-b-xs">
-                        <strong>Abonnement Bronze</strong>
-                        <span class="product-Number"> 300TND</span>
-                      </h3>
-
-                      <div class="font-bold">Pack de 48000 points</div>
-                      <address class="m-t-md"></address>
-                    </a>
-                    <div class="contact-box-footer">
-                      <div class="m-t-xs btn-group">
-                        <a id="ProfileModifier" class="btn btn-xs btn-white"
-                          ><i class="fa fa-shopping-cart"></i> Acheter
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-3">
-                  <div class="contact-box center-version">
-                    <a>
-                      <img alt="image" class="img-circle" src="img/murex.png" />
-
-                      <h3 class="m-b-xs">
-                        <strong>Abonnement Silver</strong>
-                        <span class="product-Number"> 480TND </span>
-                      </h3>
-
-                      <div class="font-bold">Pack de 84000 points</div>
-                      <address class="m-t-md"></address>
-                    </a>
-                    <div class="contact-box-footer">
-                      <div class="m-t-xs btn-group">
-                        <a id="ProfileModifier" class="btn btn-xs btn-white"
-                          ><i class="fa fa-shopping-cart"></i> Acheter
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-lg-3">
-                  <div class="contact-box center-version">
-                    <a>
-                      <img alt="image" class="img-circle" src="img/murex.png" />
-
-                      <h3 class="m-b-xs">
-                        <strong>Abonnement Starter</strong
-                        ><span class="product-Number">17TND</span>
-                      </h3>
-
-                      <div class="font-bold">Pack de 1000 points</div>
-                      <address class="m-t-md"></address>
-                    </a>
-                    <div class="contact-box-footer">
-                      <div class="m-t-xs btn-group">
-                        <a id="ProfileModifier" class="btn btn-xs btn-white"
-                          ><i class="fa fa-shopping-cart"></i> Acheter
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-3">
-                  <div class="contact-box center-version">
-                    <a>
-                      <img alt="image" class="img-circle" src="img/murex.png" />
-
-                      <h3 class="m-b-xs">
-                        <strong>Abonnement Basic</strong>
-                        <span class="product-Number">85TND</span>
-                      </h3>
-
-                      <div class="font-bold">Pack de 10000 points</div>
-                      <address class="m-t-md"></address>
-                    </a>
-                    <div class="contact-box-footer">
-                      <div class="m-t-xs btn-group">
-                        <a id="ProfileModifier" class="btn btn-xs btn-white"
-                          ><i class="fa fa-shopping-cart"></i> Acheter
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-3">
-                  <div class="contact-box center-version">
-                    <a>
-                      <img alt="image" class="img-circle" src="img/murex.png" />
-
-                      <h3 class="m-b-xs">
-                        <strong>Abonnement Bronze</strong>
-                        <span class="product-Number"> 300TND</span>
-                      </h3>
-
-                      <div class="font-bold">Pack de 48000 points</div>
-                      <address class="m-t-md"></address>
-                    </a>
-                    <div class="contact-box-footer">
-                      <div class="m-t-xs btn-group">
-                        <a id="ProfileModifier" class="btn btn-xs btn-white"
-                          ><i class="fa fa-shopping-cart"></i> Acheter
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-3">
-                  <div class="contact-box center-version">
-                    <a>
-                      <img alt="image" class="img-circle" src="img/murex.png" />
-
-                      <h3 class="m-b-xs">
-                        <strong>Abonnement Silver</strong>
-                        <span class="product-Number"> 480TND </span>
-                      </h3>
-
-                      <div class="font-bold">Pack de 84000 points</div>
-                      <address class="m-t-md"></address>
-                    </a>
-                    <div class="contact-box-footer">
-                      <div class="m-t-xs btn-group">
-                        <a id="ProfileModifier" class="btn btn-xs btn-white"
-                          ><i class="fa fa-shopping-cart"></i> Acheter
-                        </a>
+                                                    <td>
+                                                      <input
+                                                        type="text"
+                                                        placeholder="CHEQUE CERTIFIE"
+                                                      />
+                                                    </td>
+                                                   
+                                                    <td style="color: green">
+                                                      Débit
+                                                    </td>
+                                                  </tr>
+                                                </tbody>
+                                              </table>
+                                              <div
+                                                class="form-group row"
+                                                class="text-right"
+                                              >
+                                                <div class="modal-footer">
+                                                  <input
+                                                    type="submit"
+                                                    data-dismiss="modal"
+                                                    class="btn btn-xs btn-primary"
+                                                    value="Valider"
+                                                  />
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -481,6 +536,7 @@
             </div>
           </div>
         </div>
+
         <div class="footer">
           <div class="pull-right">
             Il vous reste <strong>24740 points</strong>
