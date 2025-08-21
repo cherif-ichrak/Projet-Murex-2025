@@ -90,10 +90,10 @@
               >
             </li>
 
-           <li>
+            <li>
               <a href="imputationComptable.html"
                 ><i class="fa fa-money"></i>
-                <span class="nav-label">Imputation comptable</span></a
+                <span class="nav-label">Modification Imputation </span></a
               >
             </li>
             <li>
@@ -552,7 +552,9 @@
                                         </button>
                                         <ul class="dropdown-menu">
                                           <li>
-                                            <a href="modifier-client.html"
+                                            <a
+                                              data-toggle="modal"
+                                              data-target="#myModalModifierClient"
                                               >Modifier</a
                                             >
                                           </li>
@@ -584,7 +586,9 @@
                                         </button>
                                         <ul class="dropdown-menu">
                                           <li>
-                                            <a href="modifier-client.html"
+                                            <a
+                                              data-toggle="modal"
+                                              data-target="#myModalModifierClient"
                                               >Modifier</a
                                             >
                                           </li>
@@ -616,7 +620,9 @@
                                         </button>
                                         <ul class="dropdown-menu">
                                           <li>
-                                            <a href="modifier-client.html"
+                                            <a
+                                              data-toggle="modal"
+                                              data-target="#myModalModifierClient"
                                               >Modifier</a
                                             >
                                           </li>
@@ -647,7 +653,9 @@
                                         </button>
                                         <ul class="dropdown-menu">
                                           <li>
-                                            <a href="modifier-client.html"
+                                            <a
+                                              data-toggle="modal"
+                                              data-target="#myModalModifierClient"
                                               >Modifier</a
                                             >
                                           </li>
@@ -658,6 +666,106 @@
                                   </tr>
                                 </tbody>
                               </table>
+                              <div
+                                class="modal inmodal"
+                                id="myModalModifierClient"
+                                tabindex="-1"
+                                role="dialog"
+                                aria-hidden="true"
+                              >
+                                <div class="modal-dialog">
+                                  <div
+                                    class="modal-content animated bounceInRight"
+                                  >
+                                    <div class="modal-header">
+                                      <button
+                                        type="button"
+                                        class="close"
+                                        data-dismiss="modal"
+                                      >
+                                        <span aria-hidden="true">&times;</span
+                                        ><span class="sr-only">Fermer</span>
+                                      </button>
+
+                                      <h4 class="modal-title">
+                                        Modifier Client
+                                      </h4>
+                                    </div>
+                                    <div class="modal-body">
+                                      <form class="form-horizontal">
+                                        <div class="form-group row">
+                                          <label class="col-sm-4">Code</label>
+                                          <div class="col-sm-8">
+                                            <input
+                                              class="form-control"
+                                              placeholder=""
+                                            />
+                                          </div>
+                                        </div>
+                                        <div class="form-group row">
+                                          <label class="col-sm-4"
+                                            >Intitulé</label
+                                          >
+                                          <div class="col-sm-8">
+                                            <input
+                                              class="form-control"
+                                              placeholder=""
+                                            />
+                                          </div>
+                                        </div>
+                                        <div class="form-group row">
+                                          <label class="col-sm-4"
+                                            >Matricule Fiscal</label
+                                          >
+                                          <div class="col-sm-8">
+                                            <input
+                                              class="form-control"
+                                              placeholder=""
+                                            />
+                                          </div>
+                                        </div>
+                                        <!--   <div class="form-group row">
+                                      <label class="col-sm-4"
+                                        >Nbre Banque</label
+                                      >
+                                      <div class="col-sm-8">
+                                        <input
+                                          class="form-control"
+                                          placeholder=""
+                                        />
+                                      </div>
+                                    </div>
+                                    <div class="form-group row">
+                                      <label class="col-sm-4">Nbre RIB</label>
+                                      <div class="col-sm-8">
+                                        <input
+                                          class="form-control"
+                                          placeholder=""
+                                        />
+                                      </div>
+                                    </div>-->
+
+                                        <div class="row" class="text-right">
+                                          <div class="modal-footer">
+                                            <input
+                                              type="submit"
+                                              class="btn btn-xs btn-default"
+                                              data-dismiss="modal"
+                                              value="Annuler"
+                                            />
+                                            <input
+                                              type="submit"
+                                              data-dismiss="modal"
+                                              class="btn btn-xs btn-primary"
+                                              value="Modifier"
+                                            />
+                                          </div>
+                                        </div>
+                                      </form>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
 
                               <div
                                 id="table_clients_processing"
