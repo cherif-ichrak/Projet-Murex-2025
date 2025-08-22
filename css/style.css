@@ -8797,3 +8797,10 @@ body.md-skin {
   font-weight: 700; /* Gras */
   font-style: italic; /* Italique si tu veux */
 }
+.navbar-static-side {
+  width: 240px; /*hoisis la largeur qui te convient */
+}
+
+#page-wrapper {
+  margin-left: 240px; /* décale le contenu principal */
+}
