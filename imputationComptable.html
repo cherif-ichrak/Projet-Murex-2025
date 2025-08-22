@@ -287,6 +287,80 @@
                         >
                           <div class="row">
                             <div class="col-lg-12">
+                              <div class="panel-heading">
+                                <div class="panel-options">
+                                  <form>
+                                    <div class="form-group row">
+                                      <div class="col-sm-3">
+                                        <select class="form-control">
+                                          <option value="">
+                                            ---------- Choisissez un client
+                                            -----------
+                                          </option>
+                                          <option value="83">
+                                            CLIENT-1ssaaaa
+                                          </option>
+                                          <option value="84">NAS</option>
+                                          <option value="85">WARAM</option>
+                                          <option value="86">W</option>
+                                          <option value="87">NEW</option>
+                                        </select>
+                                      </div>
+                                      <div class="col-sm-4">
+                                        <select class="form-control">
+                                          <option value="">
+                                            ---------- Choisissez Banque
+                                            ----------
+                                          </option>
+                                          <option value="83">
+                                            CLIENT-1ssaaaa
+                                          </option>
+                                          <option value="84">NAS</option>
+                                          <option value="85">WARAM</option>
+                                          <option value="86">W</option>
+                                          <option value="87">NEW</option>
+                                        </select>
+                                      </div>
+                                      <div class="col-sm-4">
+                                        <select class="form-control">
+                                          <option value="">
+                                            ---------- Choisissez RIB ----------
+                                          </option>
+                                          <option value="83">
+                                            01 025356 28956
+                                          </option>
+                                          <option value="84">
+                                            01 025356 28956
+                                          </option>
+                                          <option value="85">
+                                            01 025356 28956
+                                          </option>
+                                          <option value="86">
+                                            01 025356 28956
+                                          </option>
+                                          <option value="87">
+                                            01 025356 28956
+                                          </option>
+                                        </select>
+                                      </div>
+
+                                      <div class="col-sm-1">
+                                        <button
+                                          id="upload"
+                                          type="button"
+                                          class="btn btn-outline btn-info dim"
+                                          data-toggle="modal"
+                                          data-target="#modal_clients_upload"
+                                          data-whatever="5"
+                                          title="Valider"
+                                        >
+                                          <i class="fa fa-check"></i>
+                                        </button>
+                                      </div>
+                                    </div>
+                                  </form>
+                                </div>
+                              </div>
                               <div class="col-sm-12">
                                 <table
                                   id="table_clients"
@@ -626,13 +700,19 @@
                                   <div
                                     class="col-11 col-sm-11 align-self-center pt-1 pt-sm-0 text-right"
                                   >
-                                    <button
-                                      class="btn btn-outline btn-info dim export_modele"
-                                      data-whatever="5"
-                                      title="Excel"
+                                    <div
+                                      class="form-group row"
+                                      class="text-right"
                                     >
-                                      <i class="fa fa-file-excel-o"></i>
-                                    </button>
+                                      <div class="modal-footer">
+                                        <input
+                                          type="submit"
+                                          data-dismiss="modal"
+                                          class="btn btn-primary"
+                                          value="Valider"
+                                        />
+                                      </div>
+                                    </div>
                                   </div>
                                 </div>
                               </div>
